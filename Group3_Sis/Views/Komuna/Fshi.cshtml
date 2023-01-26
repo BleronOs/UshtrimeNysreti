@@ -1,0 +1,16 @@
+﻿@model Komuna
+<form method="post">
+    <div class="border p-4">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <h2 class="text-primary"> Fshi Komunen</h2>
+            <hr />
+        </div>
+        <div class="mb-2">
+            <label asp-for="Emri"></label>
+            <input asp-for="Emri" disabled class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-danger">Fshi</button>
+        <a class="btn btn-secondary" asp-controller="Komuna" asp-action="Listo">Kthehu</a>
+    </div>
+</form>

@@ -1,0 +1,31 @@
+﻿@model Studenti
+
+<form method="post">
+    <div class="border">
+        <div class="row">
+            <h3 class="text-primary">Shtimi i studentit</h3>
+        </div>
+        <div class="mb-3 p-2">
+            <label asp-for="Emri"></label>
+            <input asp-for="Emri" class="form-control"/>
+            <span asp-validation-for="Emri" class="text-danger"></span>
+        </div>
+        <div class="mb-3 p-2">
+            <label asp-for="Mbiemri"></label>
+            <input asp-for="Mbiemri" class="form-control" />
+            <span asp-validation-for="Mbiemri" class="text-danger"></span>
+        </div>
+        <div class="mb-3 p-2">
+            <label asp-for="KomunaId"></label>
+            <select asp-for="KomunaId" class="form-select" 
+                    asp-items="ViewBag.Komunat">
+                <option value="0">-Selekto Komunen-</option>
+            </select>
+            <span asp-validation-for="KomunaId" class="text-danger"></span>
+        </div>
+    <div class="mb-3 p-2">
+        <button type="submit" class="btn btn-success" >Ruaj</button>
+        <a asp-controller="Student" class="btn btn-secondary" asp-action="Listo" >Kthehu</a>
+    </div>
+    </div>
+</form>

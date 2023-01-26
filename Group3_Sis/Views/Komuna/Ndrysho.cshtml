@@ -1,0 +1,23 @@
+﻿@model Komuna
+<form method="post">
+    <div class="border p-4">
+        <input type="hidden" asp-for="Id" />
+        <div class="row">
+            <h2 class="text-primary"> Ndrysho studentin</h2>
+            <hr />
+        </div>
+        <div class="mb-2">
+            <label asp-for="Emri"></label>
+            <input asp-for="Emri" class="form-control" />
+            <span asp-validation-for="Emri" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Ndrysho</button>
+        <a class="btn btn-secondary" asp-controller="Komuna" asp-action="Listo">Kthehu</a>
+    </div>
+</form>
+@section Scripts
+    {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+    }
